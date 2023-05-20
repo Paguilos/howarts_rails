@@ -1,0 +1,7 @@
+<h1>Personajes de Harry Potter</h1>
+<% Character.all.each do |u|%>
+   Name: <%= u.name%><br>
+   Location: <%= u.location%><br>
+   House: <%= u.house%><br><br>
+________________________________________________________<br>
+<% end %>

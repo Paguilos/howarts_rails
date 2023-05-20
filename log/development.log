@@ -1,0 +1,362 @@
+  [1m[35m (1501.3ms)[0m  [1m[35mCREATE DATABASE "howarts_rails_development" ENCODING = 'unicode'[0m
+  [1m[35m (1040.5ms)[0m  [1m[35mCREATE DATABASE "howarts_rails_test" ENCODING = 'unicode'[0m
+  [1m[35m (49.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (15.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3976943446808128440)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCharacters (20230519154021)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (30.2ms)[0m  [1m[35mCREATE TABLE "characters" ("id" bigserial primary key, "name" character varying, "location" character varying, "house" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (8.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230519154021"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (3.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-05-19 16:07:42.088461"], ["updated_at", "2023-05-19 16:07:42.088461"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(3976943446808128440)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (9.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Load (8.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (13.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Load (31.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (8.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCharacter Load (10.9ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (26.3ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Bellatrix Lestrange"], ["location", "Potage's Cauldron Shop"], ["house", "Hufflepuff"], ["created_at", "2023-05-19 16:32:17.614339"], ["updated_at", "2023-05-19 16:32:17.614339"]]
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Xenophilius Lovegood"], ["location", "Knockturn Alley"], ["house", "Pukwudgie"], ["created_at", "2023-05-19 16:32:17.663353"], ["updated_at", "2023-05-19 16:32:17.663353"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (2.8ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Remus Lupin"], ["location", "Malfoy Manor"], ["house", "Slytherin"], ["created_at", "2023-05-19 16:32:17.672854"], ["updated_at", "2023-05-19 16:32:17.672854"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.8ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Moaning Myrtle"], ["location", "Gambol and Japes"], ["house", "Wampus"], ["created_at", "2023-05-19 16:32:17.684581"], ["updated_at", "2023-05-19 16:32:17.684581"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Sirius Black"], ["location", "Dervish & Banges"], ["house", "Gryffindor"], ["created_at", "2023-05-19 16:32:17.693846"], ["updated_at", "2023-05-19 16:32:17.693846"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Sirius Black"], ["location", "Stalls"], ["house", "Horned Serpent"], ["created_at", "2023-05-19 16:32:17.703192"], ["updated_at", "2023-05-19 16:32:17.703192"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (1.1ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Blaise Zabini"], ["location", "St. Mungo's Hospital for Magical Maladies and Injuries"], ["house", "Wampus"], ["created_at", "2023-05-19 16:32:17.714622"], ["updated_at", "2023-05-19 16:32:17.714622"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.8ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Magorian"], ["location", "Knockturn Alley"], ["house", "Horned Serpent"], ["created_at", "2023-05-19 16:32:17.725400"], ["updated_at", "2023-05-19 16:32:17.725400"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.9ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Astoria Greengrass"], ["location", "Potage's Cauldron Shop"], ["house", "Ravenclaw"], ["created_at", "2023-05-19 16:32:17.735560"], ["updated_at", "2023-05-19 16:32:17.735560"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Scabior"], ["location", "Eeylops Owl Emporium"], ["house", "Thunderbird"], ["created_at", "2023-05-19 16:32:17.746011"], ["updated_at", "2023-05-19 16:32:17.746011"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (1.0ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Marge Dursley"], ["location", "Ministry of Magic"], ["house", "Hufflepuff"], ["created_at", "2023-05-19 16:32:17.755432"], ["updated_at", "2023-05-19 16:32:17.755432"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.8ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Astoria Greengrass"], ["location", "Ilvermorny"], ["house", "Horned Serpent"], ["created_at", "2023-05-19 16:32:17.765309"], ["updated_at", "2023-05-19 16:32:17.765309"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.8ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Albert Runcorn"], ["location", "Magical Menagerie"], ["house", "Hufflepuff"], ["created_at", "2023-05-19 16:32:17.775358"], ["updated_at", "2023-05-19 16:32:17.775358"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Marge Dursley"], ["location", "St. Mungo's Hospital for Magical Maladies and Injuries"], ["house", "Horned Serpent"], ["created_at", "2023-05-19 16:32:17.785168"], ["updated_at", "2023-05-19 16:32:17.785168"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.9ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Armando Dippet"], ["location", "Numengard"], ["house", "Ravenclaw"], ["created_at", "2023-05-19 16:32:17.794680"], ["updated_at", "2023-05-19 16:32:17.794680"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.7ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Aberforth Dumbledore"], ["location", "Shell Cottage"], ["house", "Thunderbird"], ["created_at", "2023-05-19 16:32:17.804647"], ["updated_at", "2023-05-19 16:32:17.804647"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gabrielle Delacour"], ["location", "Hogsmeade"], ["house", "Slytherin"], ["created_at", "2023-05-19 16:32:17.814863"], ["updated_at", "2023-05-19 16:32:17.814863"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.8ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Broderick Bode"], ["location", "Gringotts Wizarding Bank"], ["house", "Horned Serpent"], ["created_at", "2023-05-19 16:32:17.824378"], ["updated_at", "2023-05-19 16:32:17.824378"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.6ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mary Cattermole"], ["location", "The Three Broomsticks"], ["house", "Wampus"], ["created_at", "2023-05-19 16:32:17.834675"], ["updated_at", "2023-05-19 16:32:17.834675"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharacter Create (0.8ms)[0m  [1m[32mINSERT INTO "characters" ("name", "location", "house", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Fluffy"], ["location", "Shrieking Shack"], ["house", "Horned Serpent"], ["created_at", "2023-05-19 16:32:17.843897"], ["updated_at", "2023-05-19 16:32:17.843897"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCharacter Load (7.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+Started GET "/" for ::1 at 2023-05-19 13:47:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (9.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 489)
+  Rendered layout layouts/application.html.erb (Duration: 3653.3ms | Allocations: 68719)
+Completed 500 Internal Server Error in 3932ms (ActiveRecord: 0.0ms | Allocations: 73793)
+
+
+  
+ActionView::Template::Error (Permission denied @ rb_file_s_rename - (C:/Users/pagui/ejercicios_rails/bases_datos_rails/desafio_howarts_rails/howarts_rails/tmp/cache/assets/sprockets/v4.0.0/Zp/ZpjD1Mp6BN_rSpZ3evASpcihfuVJO0EjR19mKD3fZSQ.cache.21380.22536.557882, C:/Users/pagui/ejercicios_rails/bases_datos_rails/desafio_howarts_rails/howarts_rails/tmp/cache/assets/sprockets/v4.0.0/Zp/ZpjD1Mp6BN_rSpZ3evASpcihfuVJO0EjR19mKD3fZSQ.cache)):
+  
+sprockets (4.2.0) lib/sprockets/path_utils.rb:362:in `rename'
+sprockets (4.2.0) lib/sprockets/path_utils.rb:362:in `atomic_write'
+sprockets (4.2.0) lib/sprockets/cache/file_store.rb:112:in `set'
+sprockets (4.2.0) lib/sprockets/cache.rb:227:in `set'
+sprockets (4.2.0) lib/sprockets/cache.rb:93:in `fetch'
+sprockets (4.2.0) lib/sprockets/base.rb:71:in `file_digest'
+sprockets (4.2.0) lib/sprockets/unloaded_asset.rb:105:in `dependency_history_key'
+sprockets (4.2.0) lib/sprockets/loader.rb:324:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.0) lib/sprockets/context.rb:117:in `load'
+sprockets (4.2.0) lib/sprockets/context.rb:145:in `depend_on_asset'
+sprockets (4.2.0) lib/sprockets/context.rb:185:in `link_asset'
+sprockets-rails (3.4.2) lib/sprockets/rails/context.rb:27:in `compute_asset_path'
+actionview (7.0.4.3) lib/action_view/helpers/asset_url_helper.rb:203:in `asset_path'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:41:in `sourcemap_asset_path'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:34:in `resolved_sourcemap_comment'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:15:in `block in call'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:11:in `gsub'
+sprockets-rails (3.4.2) lib/sprockets/rails/sourcemapping_url_processor.rb:11:in `call'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.0) lib/sprockets/loader.rb:182:in `load_from_unloaded'
+sprockets (4.2.0) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.0) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.0) lib/sprockets/bundle.rb:27:in `call'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.0) lib/sprockets/loader.rb:182:in `load_from_unloaded'
+sprockets (4.2.0) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.0) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.0) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.0) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `block in synchronize'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+Started GET "/" for ::1 at 2023-05-19 13:52:22 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 28.2ms | Allocations: 1150)
+  Rendered layout layouts/application.html.erb (Duration: 522.0ms | Allocations: 43133)
+Completed 200 OK in 610ms (Views: 554.7ms | ActiveRecord: 0.0ms | Allocations: 46804)
+
+
+Started GET "/" for ::1 at 2023-05-19 13:55:17 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 227.2ms | Allocations: 7540)
+  Rendered layout layouts/application.html.erb (Duration: 228.2ms | Allocations: 7637)
+Completed 500 Internal Server Error in 256ms (ActiveRecord: 0.0ms | Allocations: 8538)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Personajes de Harry Potter</h1>
+<%= Character.all.each do |i|%>
+    <% i.name%><br>
+    <% i.location%><br>
+    <% i.house%><br>
+
+):
+1:    <h1>Personajes de Harry Potter</h1>
+2:    <%= Character.all.each do |i|%>
+3:        <% i.name%><br>
+4:        <% i.location%><br>
+5:        <% i.house%><br>
+  
+app/views/pages/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/pages/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/pages/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/pages/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/pages/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/pages/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/" for ::1 at 2023-05-19 13:56:00 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 21.1ms | Allocations: 1169)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 1257)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms | Allocations: 2106)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Personajes de Harry Potter</h1>
+<%= Character.all.each do |u|%>
+    <% U.name%><br>
+    <% U.location%><br>
+    <% U.house%><br>
+
+):
+1:    <h1>Personajes de Harry Potter</h1>
+2:    <%= Character.all.each do |u|%>
+3:        <% U.name%><br>
+4:        <% U.location%><br>
+5:        <% U.house%><br>
+  
+app/views/pages/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/pages/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/pages/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/pages/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/pages/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/pages/index.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/" for ::1 at 2023-05-19 13:57:39 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (43.9ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:2
+  Rendered pages/index.html.erb within layouts/application (Duration: 543.0ms | Allocations: 13085)
+  Rendered layout layouts/application.html.erb (Duration: 624.0ms | Allocations: 16493)
+Completed 200 OK in 654ms (Views: 504.1ms | ActiveRecord: 141.3ms | Allocations: 17366)
+
+
+Started GET "/" for ::1 at 2023-05-19 13:58:24 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 19.6ms | Allocations: 1164)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 1251)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms | Allocations: 2118)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Personajes de Harry Potter</h1>
+<% Character.all.each do |u|%>
+    <%= 'name', u.name%><br>
+    <%= u.location%><br>
+    <%= u.house%><br>
+<% end %>
+
+):
+1:    <h1>Personajes de Harry Potter</h1>
+2:    <% Character.all.each do |u|%>
+3:        <%= 'name', u.name%><br>
+4:        <%= u.location%><br>
+5:        <%= u.house%><br>
+6:    <% end %>
+  
+app/views/pages/index.html.erb:3: syntax error, unexpected ',', expecting ')'
+app/views/pages/index.html.erb:3: syntax error, unexpected ',', expecting ')'
+app/views/pages/index.html.erb:3: syntax error, unexpected ',', expecting ')'
+app/views/pages/index.html.erb:3: syntax error, unexpected ',', expecting ')'
+app/views/pages/index.html.erb:3: syntax error, unexpected ',', expecting ')'
+app/views/pages/index.html.erb:3: syntax error, unexpected ',', expecting ')'
+Started GET "/" for ::1 at 2023-05-19 13:58:28 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1122)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 1200)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms | Allocations: 1475)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Personajes de Harry Potter</h1>
+<% Character.all.each do |u|%>
+    <%= 'name', u.name%><br>
+    <%= u.location%><br>
+    <%= u.house%><br>
+<% end %>
+
+):
+1:    <h1>Personajes de Harry Potter</h1>
+2:    <% Character.all.each do |u|%>
+3:        <%= 'name', u.name%><br>
+4:        <%= u.location%><br>
+5:        <%= u.house%><br>
+6:    <% end %>
+  
+app/views/pages/index.html.erb:3: syntax error, unexpected ',', expecting ')'
+app/views/pages/index.html.erb:3: syntax error, unexpected ',', expecting ')'
+app/views/pages/index.html.erb:3: syntax error, unexpected ',', expecting ')'
+app/views/pages/index.html.erb:3: syntax error, unexpected ',', expecting ')'
+app/views/pages/index.html.erb:3: syntax error, unexpected ',', expecting ')'
+app/views/pages/index.html.erb:3: syntax error, unexpected ',', expecting ')'
+Started GET "/" for ::1 at 2023-05-19 13:58:58 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (3.0ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:2
+  Rendered pages/index.html.erb within layouts/application (Duration: 38.2ms | Allocations: 1598)
+  Rendered layout layouts/application.html.erb (Duration: 65.5ms | Allocations: 4974)
+Completed 200 OK in 95ms (Views: 80.2ms | ActiveRecord: 3.0ms | Allocations: 5809)
+
+
+Started GET "/" for ::1 at 2023-05-19 13:59:46 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (2.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:2
+  Rendered pages/index.html.erb within layouts/application (Duration: 27.0ms | Allocations: 1604)
+  Rendered layout layouts/application.html.erb (Duration: 60.2ms | Allocations: 4989)
+Completed 200 OK in 83ms (Views: 72.7ms | ActiveRecord: 2.1ms | Allocations: 5849)
+
+
+Started GET "/" for ::1 at 2023-05-19 14:00:11 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (2.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:2
+  Rendered pages/index.html.erb within layouts/application (Duration: 29.6ms | Allocations: 1615)
+  Rendered layout layouts/application.html.erb (Duration: 59.4ms | Allocations: 4979)
+Completed 200 OK in 82ms (Views: 71.1ms | ActiveRecord: 2.6ms | Allocations: 5839)
+
+
+Started GET "/" for ::1 at 2023-05-19 14:00:35 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (0.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:2
+  Rendered pages/index.html.erb within layouts/application (Duration: 25.9ms | Allocations: 1600)
+  Rendered layout layouts/application.html.erb (Duration: 61.3ms | Allocations: 4970)
+Completed 200 OK in 84ms (Views: 74.9ms | ActiveRecord: 0.6ms | Allocations: 5830)
+
+
+Started GET "/" for ::1 at 2023-05-19 19:10:39 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (26.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mCharacter Load (15.1ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/pages/index.html.erb:2
+  Rendered pages/index.html.erb within layouts/application (Duration: 345.8ms | Allocations: 7554)
+  Rendered layout layouts/application.html.erb (Duration: 2015.5ms | Allocations: 45096)
+Completed 200 OK in 2575ms (Views: 2126.9ms | ActiveRecord: 58.5ms | Allocations: 48771)
+
+
